@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using TravelPlanning.Models;
 
 namespace TravelPlanning
 {
@@ -79,5 +80,6 @@ namespace TravelPlanning
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
     }
 }

@@ -1,24 +1,63 @@
-<h1 id="tableLabel">Weather forecast</h1>
+<html>
 
-<p>This component demonstrates fetching data from the server.</p>
+<head>
 
-<p *ngIf="!forecasts"><em>Loading...</em></p>
+  <meta charset="utf-8">
+  <title>Register</title>
+</head>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.date }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
-    </tr>
-  </tbody>
-</table>
+<body>
+
+  <div class="center" margin="top">
+
+    <h1>Register</h1>
+    <form method="post">
+      <div class="txt_field">
+        <input type="text" required>
+        <span></span>
+        <label>Last Name</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" required>
+        <span></span>
+        <label>First Name</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="text" required>
+        <span></span>
+        <label>Town</label>
+      </div>
+
+      <div class="txt_field">
+
+        <input type="date" required>
+        <span></span>
+        <label>Birthdate</label>
+      </div>
+
+      <div class="txt_field">
+        <input type="text" required>
+        <span></span>
+        <label>Email</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" required>
+        <span></span>
+        <label>Phone number</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+
+      <input type="submit" value="Register">
+      &nbsp;
+
+
+    </form>
+  </div>
+
+</body>
+</html>

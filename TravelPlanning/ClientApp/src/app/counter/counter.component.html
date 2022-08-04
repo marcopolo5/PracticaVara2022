@@ -1,7 +1,29 @@
-<h1>Counter</h1>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+</head>
+<body>
+  <div class="center">
+    <h1>Login</h1>
+    <form method="post">
+      <div class="txt_field">
+        <input type="text" required>
+        <span></span>
+        <label>Email</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" required>
+        <span></span>
+        <label>Password</label>
+      </div>
 
-<p>This is a simple example of an Angular component.</p>
+      <input type="submit" value="Login">
+      <div class="signup_link">
+        Not a member? <a href="#">Signup</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
 
-<p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
-
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
