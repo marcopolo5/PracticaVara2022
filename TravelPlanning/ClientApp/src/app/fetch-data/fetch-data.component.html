@@ -13,46 +13,52 @@
     <h1>Register</h1>
     <form method="post">
       <div class="txt_field">
-        <input type="text" required>
+        <input type="text" id="lastnamefield" required>
         <span></span>
         <label>Last Name</label>
       </div>
       <div class="txt_field">
-        <input type="text" required>
+        <input type="text" id="firstnamefield" required>
         <span></span>
         <label>First Name</label>
       </div>
 
       <div class="txt_field">
-        <input type="text" required>
+        <input type="text" id="cityfield" required>
         <span></span>
-        <label>Town</label>
+        <label>City</label>
       </div>
 
       <div class="txt_field">
+        <input type="text" id="countryfield" required>
+        <span></span>
+        <label>Country</label>
+      </div>
 
-        <input type="date" required>
+      <div class="txt_date">
+
+        <input type="date" id="birthdatefield" required>
         <span></span>
         <label>Birthdate</label>
       </div>
 
       <div class="txt_field">
-        <input type="text" required>
+        <input type="text" id="emailfield" required>
         <span></span>
         <label>Email</label>
       </div>
       <div class="txt_field">
-        <input type="text" required>
+        <input type="text" id="phonefield" required>
         <span></span>
         <label>Phone number</label>
       </div>
       <div class="txt_field">
-        <input type="password" required>
+        <input type="password" id="passwordfield" required>
         <span></span>
         <label>Password</label>
       </div>
 
-      <input type="submit" value="Register">
+      <input type="submit" value="Register" id="submitbutton" onclick="return funct();">
       &nbsp;
 
 

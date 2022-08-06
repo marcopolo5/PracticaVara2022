@@ -13,6 +13,17 @@ export class FetchDataComponent {
       this.forecasts = result;
     }, error => console.error(error));
   }
+
+  funct() {
+    var email = document.getElementById('emailfield');
+    var password = document.getElementById('passwordfield');
+    var name = document.getElementById('lastnamefield');
+    var surname = document.getElementById('firstnamefield');
+    var phoneNumber = document.getElementById('phonefield');
+    var city = document.getElementById('cityfield');
+    var country = document.getElementById('countryfield');
+    var dateOfBirth = document.getElementById('birthdatefield');
+  }
 }
 
 interface WeatherForecast {
@@ -20,4 +31,15 @@ interface WeatherForecast {
   temperatureC: number;
   temperatureF: number;
   summary: string;
+}
+
+interface User {
+  email: string;
+  password: string;
+  name: string;
+  surname: string;
+  phoneNumber: string;
+  city: string;
+  country: string;
+  dateOfBirth: Date;
 }
