@@ -22,6 +22,61 @@ namespace TravelPlanning.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("TravelPlanning.Form", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<double>("Budget")
+                        .HasColumnType("float")
+                        .HasColumnName("budget");
+
+                    b.Property<DateTime>("DateOfArrival")
+                        .HasColumnType("date")
+                        .HasColumnName("date_of_arrival");
+
+                    b.Property<DateTime>("DateOfDeparture")
+                        .HasColumnType("date")
+                        .HasColumnName("date_of_departure");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("location");
+
+                    b.Property<int>("NumberOfAdults")
+                        .HasColumnType("int")
+                        .HasColumnName("number_of_adults");
+
+                    b.Property<int>("NumberOfChildren")
+                        .HasColumnType("int")
+                        .HasColumnName("number_of_children");
+
+                    b.Property<string>("Transportation")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("transportation");
+
+                    b.Property<string>("TypeOfStay")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("type_of_stay");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Forms");
+                });
+
             modelBuilder.Entity("TravelPlanning.User", b =>
                 {
                     b.Property<string>("Email")
@@ -78,10 +133,9 @@ namespace TravelPlanning.Migrations
 
                     b.HasKey("Email");
 
-                    b.ToTable("User", (string)null);
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }
-
     }
 }
